@@ -1,0 +1,623 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto',  sans-serif;
+}
+
+body {
+  background: #f0f0f5;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #322153;
+}
+
+#page-home {
+  height: 100vh;
+  background: url("/assets/home-background.svg") no-repeat;
+  background-position: 35vw bottom;
+}
+
+#page-home .content {
+  width: 90%;
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#page-home header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+#page-home header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #322153;
+  font-weight: 700;
+}
+
+#page-home header a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("/assets/log-in.svg");
+  width: 20px;
+  height: 20px;
+  margin-right: 18px;
+}
+
+#page-home main {
+  max-width: 560px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#page-home main h1 {
+  font-size: 54px;
+}
+
+#page-home main p {
+  font-size: 24px;
+  line-height: 38px;
+  margin-top: 24px;
+}
+
+#page-home main a {
+  width: 100%;
+  height: 72px;
+  max-width: 360px;
+  margin-top: 48px;
+  background: #34cb79;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  color: #fff;
+}
+
+#page-home main a:hover {
+  background-color: #2fb86e;
+}
+
+#page-home main a span {
+  width: 72px;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.08);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#page-home main a span::after {
+  content: "";
+  background-image: url("/assets/search.svg");
+  width: 20px;
+  height: 20px;
+}
+
+#page-home main a strong {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+#modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0e0a14ef;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+#modal .content {
+  color: #fff;
+  width: 420px;
+}
+
+#modal .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+#modal .header a {
+  background-image: url("/assets/x.svg");
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.01px;
+}
+
+#modal .header h1 {
+  color: #fff;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+#modal form label {
+  font-size: 14px;
+  line-height: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#modal form .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#modal form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #f0f0f5;
+  border-radius: 8px 0 0 8px;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: #6c6c80;
+}
+
+#modal form button {
+  width: 72px;
+  height: 72px;
+  background-color: #34cb79;
+  border: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+#modal form button:hover {
+  background-color: #2fb85e;
+}
+
+#modal.hide {
+  display: none;
+}
+
+#modal.point .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#modal.point h1 {
+  color: #fff;
+  margin-top: 32px;
+}
+
+#page-create-point .items-grid li span, #page-create-point .items-grid li img {
+  pointer-events: none;
+}
+
+#page-create-point {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#page-create-point header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 48px;
+}
+
+#page-create-point header a {
+  color: #322153;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-create-point header a span {
+  background-image: url("/assets/arrow-left.svg");
+  width: 20px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 16px;
+}
+
+#page-create-point form {
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 64px;
+  width: 720px;
+}
+
+#page-create-point form h1 {
+  font-size: 36px;
+}
+
+#page-create-point form fieldset {
+  margin-top: 64px;
+  border: 0;
+}
+
+#page-create-point form legend {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+#page-create-point form legend h2 {
+  font-size: 24px;
+}
+
+#page-create-point form legend span {
+  color: #322153;
+  font-size: 14px;
+}
+
+#page-create-point form .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 24px;
+}
+
+#page-create-point form .field-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#page-create-point form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+#page-create-point form input, #page-create-point form select {
+  background-color: #f0f0f5;
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#page-create-point form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#page-create-point form label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#page-create-point button {
+  width: 260px;
+  height: 56px;
+  background-color: #34cb79;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 40px;
+  -webkit-transition: background-color 400ms;
+  transition: background-color 400ms;
+}
+
+#page-create-point button:hover {
+  background-color: #2fb86e;
+}
+
+#page-create-point .items-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+#page-create-point .items-grid li {
+  background-color: #f5f5f5;
+  list-style: none;
+  border: 2px solid #f5f5f5;
+  border-radius: 8px;
+  height: 180px;
+  padding: 32px 24px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  cursor: pointer;
+}
+
+#page-create-point .items-grid li.selected {
+  background-color: #e1faec;
+  border: 2px solid #34cb79;
+}
+
+#page-create-point .items-grid li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #322153;
+  margin-top: 12px;
+}
+
+#search-body {
+  background: #fff;
+}
+
+#search-body::after {
+  content: '';
+  position: absolute;
+  background: #f0f0f5;
+  height: 16rem;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#page-search-results {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#page-search-results header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 48px;
+}
+
+#page-search-results header a {
+  color: #322153;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-search-results header a span {
+  background-image: url("/assets/arrow-left.svg");
+  width: 20px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 16px;
+}
+
+#page-search-results main {
+  margin: 48px 0;
+}
+
+#page-search-results main h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  margin-bottom: 32px;
+}
+
+#page-search-results main .card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px 8px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#page-search-results main .card h1 {
+  font-size: 36px;
+  line-height: 41px;
+  color: #322153;
+  margin-top: 32px;
+}
+
+#page-search-results main .card h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 34px;
+  color: #34cb79;
+  margin: 24px 0;
+}
+
+#page-search-results main .card p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #6c6c80;
+}
+
+#page-search-results main .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  #page-home {
+    background-position-x: 70vw;
+  }
+  #page-home .content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #page-home header a {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  #page-home main {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #page-home main a {
+    margin-bottom: 72px;
+  }
+  #page-create-point .field-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #page-create-point .field-group .field + .field {
+    margin-left: 0;
+  }
+  #page-search-results main .cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #page-search-results main .card img {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1700px) {
+  #page-home {
+    background-position-x: 40vw;
+  }
+}
+
+@media (max-height: 760px) {
+  #page-home {
+    background-position-y: 200px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
